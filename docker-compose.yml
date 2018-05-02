@@ -4,8 +4,18 @@ services:
   web:
     build: .
     name: quassel_Core
-    network_mode: "bridge"
+    networks:
+      - public
     ports:
       - "4242:4242"
     volumes:
       - "/srv/quassel:/var/lib/quassel"
+    labels:
+      - "traefik.backend=ircQuassel"
+      - "traefik.frontend.rule=Host:"
+      - "traefik.enable=true"
+      - "traefik.port=4242"
+networks:
+  public:
+    external:
+      name: traefik_net
