@@ -7,4 +7,4 @@ services:
     ports:
       - "4242:4242"
     volumes:
-      - "/path/to:/var/lib/quassel"
+      - "/srv/quassel:/var/lib/quassel"
