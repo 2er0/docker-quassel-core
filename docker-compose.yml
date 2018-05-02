@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    name: quassel_Core
+    container_name: quassel_Core
     networks:
       - public
     ports:
