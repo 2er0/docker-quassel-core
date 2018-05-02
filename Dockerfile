@@ -4,7 +4,8 @@ MAINTAINER David Baumgartner <2er0@dbaumi.at>
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 	quassel-core \
 	libqt4-sql-psql \
-	libqca2-plugin-ossl libicu55 \
+	libqca2-plugins \
+	libicu55 \
 	sqlite3
 
 USER quasselcore
