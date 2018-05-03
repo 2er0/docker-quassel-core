@@ -2,7 +2,7 @@ version: '3'
 
 services:
   proxy:
-    image: "serjs/go-socks5-proxy"
+    image: ./proxy
     container_name: quassel_proxy
     depends_on:
       - core
