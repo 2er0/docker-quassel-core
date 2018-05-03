@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 MAINTAINER David Baumgartner <2er0@dbaumi.at>
 
 RUN noninteractive apt-get update && apt-get install -y \
