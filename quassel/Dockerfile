@@ -1,7 +1,7 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER David Baumgartner <2er0@dbaumi.at>
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
+RUN noninteractive apt-get update && apt-get install -y \
 	quassel-core \
 	libqt4-sql-psql \
 	libqca2-plugins \

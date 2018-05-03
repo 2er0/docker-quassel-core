@@ -1,22 +1,32 @@
 version: '3'
 
 services:
-  web:
-    build: .
-    container_name: quassel_Core
-    networks:
+  proxy:
+    image: "serjs/go-socks5-proxy"
+    container_name: quassel_proxy
+    depends_on:
+      - core
+    network:
       - public
-#    ports:
-#      - "4242:4242"
-    volumes:
-      - "/srv/quassel:/var/lib/quassel"
+      - quassel_net
     labels:
       - "traefik.backend=ircQuassel"
       - "traefik.frontend.rule=Host:"
       - "traefik.enable=true"
-      - "traefik.port=4242"
+      - "traefik.port=1080"
 #      - "traefik.frontend.auth.basic=[]"
+
+  core:
+    build: ./quassel
+    container_name: quassel_core
+    network:
+      - quassel_net
+    volumes:
+      - "/srv/quassel:/var/lib/quassel"
+
 networks:
+  quassel_net:
+    driver: bridge
   public:
     external:
       name: traefik_net
