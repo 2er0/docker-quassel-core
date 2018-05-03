@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER David Baumgartner <2er0@dbaumi.at>
 
-RUN noninteractive apt-get update && apt-get install -y \
+RUN UBUNTU_INSTALL=noninteractive apt-get update && apt-get install -y \
 	quassel-core \
 	libqt4-sql-psql \
 	libqca2-plugins \
