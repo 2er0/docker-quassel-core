@@ -6,7 +6,7 @@ services:
     container_name: quassel_proxy
     depends_on:
       - core
-    network:
+    networks:
       - public
       - quassel_net
     labels:
@@ -19,7 +19,7 @@ services:
   core:
     build: ./quassel
     container_name: quassel_core
-    network:
+    networks:
       - quassel_net
     volumes:
       - "/srv/quassel:/var/lib/quassel"
