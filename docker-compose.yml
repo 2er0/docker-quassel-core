@@ -2,7 +2,7 @@ version: '3'
 
 services:
   proxy:
-    image: ./proxy
+    build: ./proxy
     container_name: quassel_proxy
     depends_on:
       - core
