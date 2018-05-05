@@ -43,9 +43,6 @@ RUN set -ex \
     && rm -rf /var/cache/apk/* \
     && mkdir /var/lib/quassel
 
-RUN apk add python
-RUN curl -sSL -o manageusers.py https://raw.githubusercontent.com/eugeii/quassel-manage-users/master/manageusers.py
-
 VOLUME ["/var/lib/quassel"]
 ENTRYPOINT ["quasselcore", "--configdir=/var/lib/quassel/"]
 EXPOSE 4242
