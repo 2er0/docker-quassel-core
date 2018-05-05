@@ -4,6 +4,7 @@ MAINTAINER David Baumgartner <2er0@dbaumi.at>
 RUN UBUNTU_INSTALL=noninteractive apt-get update && apt-get install -y \
 	quassel-core \
 	libqt4-sql-psql \
+	libqt4-sql-sqlite \
 	libqca2-plugins \
 	libicu55 \
 	sqlite3
