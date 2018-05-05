@@ -13,7 +13,7 @@ services:
       - "traefik.backend=ircQuassel"
       - "traefik.frontend.rule=Host:"
       - "traefik.enable=true"
-      - "traefik.port=1080"
+      - "traefik.port=8080"
 #      - "traefik.frontend.auth.basic=[]"
 
   core:
