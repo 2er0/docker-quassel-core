@@ -6,7 +6,9 @@ RUN apk update && apk upgrade && \
 WORKDIR /go/src/github.com/2er0/goHttpProxy
 RUN git clone https://github.com/2er0/goHttpProxy.git .
 
-RUN go-wrapper download
-RUN go-wrapper install
+RUN go get -d -v ./...
+RUN go install -v ./...
 
-CMD ["go-wrapper", "run"]
+WORKDIR /go/bin
+
+CMD ["goHttpProxy"]
