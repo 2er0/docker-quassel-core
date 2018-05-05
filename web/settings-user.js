@@ -1,7 +1,7 @@
 module.exports = {
 	default: {  // Those can be overhidden in the browser
-		host: 'home.dbaumi.at',  // quasselcore host
-		port: 44242,  // quasselcore port
+		host: 'core',  // quasselcore host
+		port: 4242,  // quasselcore port
 		initialBacklogLimit: 20,  // Amount of backlogs to fetch per buffer on connection
 		backlogLimit: 100,  // Amount of backlogs to fetch per buffer after first retrieval
 		securecore: true,  // Connect to the core using SSL
