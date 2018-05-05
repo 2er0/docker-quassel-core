@@ -16,5 +16,6 @@ RUN npm install --production
 
 COPY settings-user.js .
 
-ENTRYPOINT ["/usr/bin/node", "/opt/quassel-webserver/app.js -l 0.0.0.0 -m http"]
+ENTRYPOINT ["/usr/bin/node", "/opt/quassel-webserver/app.js"]
+#CMD ["-l 127.0.0.1", "-m http", "-p 64080"]
 EXPOSE 64080
