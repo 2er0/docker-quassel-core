@@ -5,7 +5,7 @@ module.exports = {
 		initialBacklogLimit: 20,  // Amount of backlogs to fetch per buffer on connection
 		backlogLimit: 100,  // Amount of backlogs to fetch per buffer after first retrieval
 		securecore: true,  // Connect to the core using SSL
-		theme: 'default',  // Default UI theme
+		theme: 'darksolarized',  // Default UI theme
 		perchathistory: true,  // Separate history per buffer
 		displayfullhostmask: false,  // Display full hostmask instead of just nicks in messages
 		emptybufferonswitch: false,  // Trim buffer when switching to another buffer. Can be `false` or a positive integer
