@@ -11,7 +11,7 @@ RUN set -ex \
     && export QS_GIT=https://github.com/quassel/quassel.git \
     && export QS_DIR=quassel \
     && apk add --update --virtual .qs-deps libgcc libstdc++ \
-    && apk add --virtual .qs-builddeps bash build-base openssl-dev linux-headers curl git cmake \
+    && apk add --virtual .qs-builddeps bash build-base openssl openssl-dev linux-headers curl git cmake \
     && curl -sSL $QT_BASE_SRC | tar xJ \
     && cd $QT_BASE_DIR \
       && bash ./configure -opensource -confirm-license -static -qt-sqlite -sql-sqlite \
