@@ -43,7 +43,7 @@ RUN set -ex \
     && rm -rf /var/cache/apk/* \
     && mkdir /var/lib/quassel
 
-RUN apk add openssl curl 
+RUN apk add --no-cache openssl curl 
 
 VOLUME ["/var/lib/quassel"]
 ENTRYPOINT ["quasselcore", "--configdir=/var/lib/quassel/"]
